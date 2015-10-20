@@ -39,5 +39,5 @@ _by Kevin Orta_
 ---
 ## Workflow & Commands
 * To check what files need to by saved and commited:
-    * 'git status'
+    * `git status`
     * 
