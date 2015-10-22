@@ -1,7 +1,7 @@
 # GitHub Tutorial Project
 
 ## _Overview_  
-
+2
 * Using markdown syntax, display all of your knowledge about **Git** and **Github** in a single README file.  
 
 ## _Directions_
