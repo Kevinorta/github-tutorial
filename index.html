@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>GitHub-tutorial by Kevinorta</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Kevinorta/github-tutorial">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Kevinorta/github-tutorial/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Kevinorta/github-tutorial/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>GitHub-tutorial</h1>
+          <p>Getting started with GitHub</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Kevinorta">Kevinorta</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="github-tutorial" class="anchor" href="#github-tutorial" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitHub Tutorial</h1>
+
+<p><em>by Kevin Orta</em></p>
+
+<hr>
+
+<h2>
+<a id="git-vs-github" class="anchor" href="#git-vs-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git vs. GitHub</h2>
+
+<p>Git and Github can be used together, but git doesn't require you to use github, 
+but github requires you to use git.. Both allow your to keep track of your 
+progress, but offer different funcionalities that work well together</p>
+
+<ul>
+<li>
+<p>Git</p>
+
+<ul>
+<li>Runs locally</li>
+<li>Allows you to take snapshot of your code</li>
+</ul>
+</li>
+<li>
+<p>GitHub</p>
+
+<ul>
+<li> Saves your commits in the cloud.</li>
+<li>Allows collaboration on the same project.</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="initial-setup" class="anchor" href="#initial-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial Setup</h2>
+
+<p>Before using git and github you must first set up a few things.</p>
+
+<h4>
+<a id="creating-a-github-account" class="anchor" href="#creating-a-github-account" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating A GitHub Account</h4>
+
+<ol>
+<li>Go to <a href="https://github.com">GitHub</a>
+</li>
+<li>Click the green <strong>Sign Up</strong> button in the top right corner.</li>
+<li>Fill out the appropriate information.</li>
+<li>Select the free account.</li>
+<li>Click the <strong>Finish Account</strong> button<br>
+</li>
+</ol>
+
+<h4>
+<a id="adding-an-ssh-key" class="anchor" href="#adding-an-ssh-key" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding an SSH Key</h4>
+
+<p>SSH Keys is the way you link your github to your cloud 9 so that it gives 
+you access to your github account. </p>
+
+<ol>
+<li>Navigate to your cloud 9 settings.</li>
+<li>Click on the <strong>SSH Key</strong> tab on the left.</li>
+<li>Copy the <strong>Default SSH Key</strong> to your clipboard.</li>
+<li>Head to your Github settings page.</li>
+<li>Click the <strong>SSH Keys</strong> tab on the side.</li>
+<li>Click <strong>Add SSH Key</strong>.</li>
+<li>Make the title <strong>Cloud 9</strong> and paste the SSH Key you ahve copied into the provided box.</li>
+</ol>
+
+<h4>
+<a id="git-config" class="anchor" href="#git-config" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git Config</h4>
+
+<p>Git Config identifies the changes made to the repository as the name and email your input.    </p>
+
+<ul>
+<li>
+<code>git config --global user.name YOUR NAME</code> to set your name.</li>
+<li>
+<code>git config --global user.email YOUR EMAIL</code> to set up your email.</li>
+<li>Since you type it in --global you dont have to ever type this again.</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="repository-setup" class="anchor" href="#repository-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repository Setup</h2>
+
+<ol>
+<li>First type <code>git init</code> in your main repository where you are working from.
+
+<ul>
+<li>If you initialize the wrong folder you can remove it by typing <code>rm -rf .git</code>
+</li>
+<li>This tells cloud 9 that you will be using more git commands so it allows you to use them.</li>
+</ul>
+</li>
+<li>Once you make changes and save them you can use <code>git add</code>
+
+<ul>
+<li>a further explination of git add is below.</li>
+</ul>
+</li>
+<li>After adding you can make your first commit by using <code>git commit -m "MESSGE"</code>
+
+<ul>
+<li>Further explination below</li>
+</ul>
+</li>
+<li>On Github press the <strong>+</strong> button in the top right corner and select <strong>New Repository</strong>
+</li>
+<li>Put in the same exact name for your local repository as your github repository.</li>
+<li><strong>Create Repository</strong></li>
+<li>Make sure you select SSH.</li>
+<li>Copy the first line under <strong>…or push an existing repository from the command line</strong> : <code>git remote add origin git@github.com:USERNAME/REPOSITORY_NAME .git</code>
+
+<ul>
+<li>This connects your local repository to your github</li>
+</ul>
+</li>
+<li>Copy the line of code after that : <code>git push -u origin master</code>
+*This pushes your commits to github 
+*Further explination below</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="workflow--commands" class="anchor" href="#workflow--commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Workflow &amp; Commands</h2>
+
+<ul>
+<li>To check what files need to by saved and commited:
+
+<ul>
+<li><code>git status</code></li>
+</ul>
+</li>
+<li>To add files to the stage to get commited later on:
+
+<ul>
+<li><code>git add FILENAME</code></li>
+<li>You can also use <code>--all</code> or <code>.</code> instead of the file name to add all files that have to be commited.</li>
+<li>Multiple files can be added at the same time by putting a space between the file names.</li>
+</ul>
+</li>
+<li>To commit files use:
+
+<ul>
+<li><code>git commit -m "MESSAGE"</code></li>
+<li>
+<code>-m</code> means that the next thing you type will be your message</li>
+<li>Your message should be in present tense and be a short explination of<br>
+the changes done by making the changes included in the commit.
+*Commiting files takes a snapshot of them so that you can review changes made.</li>
+</ul>
+</li>
+<li>To send your commits to github use: 
+
+<ul>
+<li><code>git push</code></li>
+<li>This sends all of your commits to github and changes your repository on github.</li>
+</ul>
+</li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
